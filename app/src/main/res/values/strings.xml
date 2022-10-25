@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">حذف دائم و موقت اینستاگرام</string>
+    <string name="home_title">مدیریت اکانت اینستاگرام</string>
+    <string name="login_browser">ورود به حساب</string>
+    <string name="login_info">بهتره قبل از حذف یا غیرفعال کردن اکانتت یک بار روی دکمه زیر بزنی و اگه صفحه ورود به حساب رو برات نمایش داد وارد حسابی که میخوای غیر فعال یا حذفش کنی بشی.\n یادت نره که اگه رو دکمه ها زدی و با خطا روبرو شدی، حتما فیلترشکنتو روشن کنی</string>
+    <string name="login">بررسی یا ورود به حساب</string>
+    <string name="items_header">میخوای با اکانتت چیکار کنی؟</string>
+    <string name="disable_header">میخوام برای چند روز غیر فعالش کنم</string>
+    <string name="disable_info">این کار رو تقریبا دو بار در هفته میتونی انجام بدی. هر موقع که خواستی از طریق نام کاربری و کلمه عبور وارد حسابت بشی و اکانتت به حالت اولش بر میگرده</string>
+    <string name="lets_go">بزن بریم !</string>
+    <string name="delete_header">میخوام برای همیشه حذفش کنم</string>
+    <string name="delete_info">اگه این کار رو انجام بدی دیگه هیچ وقت نمیتونی به اکانتت دسترسی داشته باشی و همه ی اطلاعاتت از بین میره</string>
+    <string name="app_info">تمامی فرآیند از طریق مرورگر گوشیتون قابل انجامه و هدف از ساخت این برنامه ساده سازی مراحل حذف برای تمامی افراد هستش</string>
+    <string name="programmer">برنامه نویسی شده توسط هادی رحیمی</string>
+    <string name="loading_info">ممکنه یکم طول بکشه…</string>
+    <string name="splash_description">ساده ترین روش \n حذف همیشگی یا موقت اکانت</string>
+    <string name="temporarily_deactivate_my_account">برو آخر صفحه بعد Temporarily deactivate my account انتخاب کن</string>
+</resources>

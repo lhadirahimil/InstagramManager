@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".WebActivity">
+
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:layout_marginHorizontal="@dimen/_16mdp"
+        android:layout_marginVertical="@dimen/_7mdp"
+        app:layout_constraintBottom_toTopOf="@id/webView"
+        android:gravity="right|center"
+        android:fontFamily="@font/iran_sans_x_medium"
+        android:text="@string/temporarily_deactivate_my_account"
+        tools:ignore="RtlHardcoded" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHint"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLoading"
+        android:layout_width="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_8mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="@dimen/_12mdp"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:padding="@dimen/_6mdp"
+            android:layout_height="wrap_content">
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/_30mdp"
+                app:SpinKit_Color="@color/purple"
+                android:layout_height="@dimen/_30mdp"
+                app:SpinKit_Style="Circle"
+                android:padding="@dimen/_3mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/progressBar"
+                android:fontFamily="@font/iran_sans_x_medium"
+                android:textSize="@dimen/_12font_mdp"
+                app:layout_constraintBottom_toBottomOf="@id/progressBar"
+                app:layout_constraintEnd_toStartOf="@id/progressBar"
+                android:layout_marginEnd="@dimen/_8mdp"
+                android:text="@string/loading_info"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

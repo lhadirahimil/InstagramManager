@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.motion.widget.MotionLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutDescription="@xml/activity_main_xml_constraintlayout_scene">
+            <!--  Header Title  -->
+            <TextView
+                android:id="@+id/header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_35mdp"
+                android:fontFamily="@font/iran_sans_x_bold"
+                android:text="@string/home_title"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_16font_mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--  login to web browser  -->
+            <TextView
+                android:id="@+id/login_browser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_34mdp"
+                android:fontFamily="@font/iran_sans_x_medium"
+                android:text="@string/login_browser"
+                android:textSize="@dimen/_12font_mdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header_title" />
+
+            <!--  login to web browser information -->
+            <TextView
+                android:id="@+id/login_browser_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_23mdp"
+                android:fontFamily="@font/iran_sans_x_medium"
+                android:text="@string/login_info"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/_10font_mdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/login_browser" />
+
+
+            <!--  login button  -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40mdp"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_25mdp"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="@font/iran_sans_x_medium"
+                android:text="@string/login"
+                android:textColor="@color/c_white"
+                android:textSize="@dimen/_12font_mdp"
+                app:layout_constraintTop_toBottomOf="@id/login_browser_info" />
+
+            <!--  items Header  -->
+            <TextView
+                android:id="@+id/items_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_34mdp"
+                android:fontFamily="@font/iran_sans_x_medium"
+                android:text="@string/items_header"
+                android:textSize="@dimen/_12font_mdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+            <!--  item disable account  -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/item_disable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_26mdp"
+                app:cardBackgroundColor="@color/c_white"
+                app:cardCornerRadius="@dimen/_12mdp"
+                app:layout_constraintTop_toBottomOf="@id/items_header">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--  items Header  -->
+                    <TextView
+                        android:id="@+id/disable_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16mdp"
+                        android:fontFamily="@font/iran_sans_x_medium"
+                        android:gravity="center"
+                        android:text="@string/disable_header"
+                        android:textSize="@dimen/_12font_mdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/disable_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16mdp"
+                        android:layout_marginTop="@dimen/_23mdp"
+                        android:fontFamily="@font/iran_sans_x_medium"
+                        android:gravity="center"
+                        android:text="@string/disable_info"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/_10font_mdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/disable_header" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLetsDisable"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40mdp"
+                        android:layout_marginHorizontal="@dimen/_16mdp"
+                        android:layout_marginTop="@dimen/_25mdp"
+                        android:layout_marginBottom="@dimen/_16mdp"
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="@font/iran_sans_x_medium"
+                        android:text="@string/lets_go"
+                        android:textColor="@color/c_white"
+                        android:textSize="@dimen/_12font_mdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/disable_info" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--  item delete account  -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/item_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_26mdp"
+                app:cardBackgroundColor="@color/c_white"
+                app:cardCornerRadius="@dimen/_12mdp"
+                app:layout_constraintTop_toBottomOf="@id/item_disable">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--  items Header  -->
+                    <TextView
+                        android:id="@+id/delete_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16mdp"
+                        android:fontFamily="@font/iran_sans_x_medium"
+                        android:gravity="center"
+                        android:text="@string/delete_header"
+                        android:textSize="@dimen/_12font_mdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/delete_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16mdp"
+                        android:layout_marginTop="@dimen/_23mdp"
+                        android:fontFamily="@font/iran_sans_x_medium"
+                        android:gravity="center"
+                        android:text="@string/delete_info"
+                        android:textColor="@color/text_gray"
+                        android:textSize="@dimen/_11font_mdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/delete_header" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLetsDelete"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40mdp"
+                        android:layout_marginHorizontal="@dimen/_16mdp"
+                        android:layout_marginTop="@dimen/_25mdp"
+                        android:layout_marginBottom="@dimen/_16mdp"
+                        android:background="@drawable/btn_bg"
+                        android:fontFamily="@font/iran_sans_x_medium"
+                        android:text="@string/lets_go"
+                        android:textColor="@color/c_white"
+                        android:textSize="@dimen/_12font_mdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/delete_info" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--      description info      -->
+            <TextView
+                android:id="@+id/app_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_40mdp"
+                android:fontFamily="@font/iran_sans_x_medium"
+                android:gravity="center"
+                android:text="@string/app_info"
+                android:textSize="@dimen/_11font_mdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_delete" />
+
+            <!--      programmer info      -->
+            <TextView
+                android:id="@+id/programmer_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_40mdp"
+                android:layout_marginBottom="@dimen/_16mdp"
+                android:fontFamily="@font/iran_sans_x_medium"
+                android:gravity="center"
+                android:text="@string/programmer"
+                android:textSize="@dimen/_11font_mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/app_info" />
+
+        </androidx.constraintlayout.motion.widget.MotionLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
